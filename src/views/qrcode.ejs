@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta http-equiv="refresh" content="5" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Código QR</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+  </head>
+  <body>
+    <h1>Escanear código QR en Whatsapp</h1>
+
+    <br />
+
+    <canvas id="qrcode"></canvas>
+
+    <script type="text/javascript">
+      new QRious({ element: document.getElementById('qrcode'), size: 512, value: `<%= qr %>` });
+    </script>
+  </body>
+</html>
