@@ -1,5 +1,5 @@
 import express from 'express';
-import { Client } from 'whatsapp-web.js';
+import { Client, NoAuth } from 'whatsapp-web.js';
 
 import { localCacheAdapter } from './adapters';
 
@@ -20,10 +20,10 @@ export const bootstrapWhatsappClient = (app: express.Application) => {
   //
 
   const client = new Client({
-    // authStrategy: new LocalAuth(),
     puppeteer: {
       args: ['--no-sandbox', '--disable-setuid-sandbox'],
     },
+    authStrategy: new NoAuth(),
   });
 
   client.on('qr', async qr => {

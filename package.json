@@ -7,7 +7,8 @@
   "author": "eduardolat",
   "license": "MIT",
   "engines": {
-    "node": ">=18"
+    "node": ">=18",
+    "pnpm": ">=7"
   },
   "scripts": {
     "build": "tsc",
@@ -24,12 +25,13 @@
     "helmet": "6.0.0",
     "morgan": "1.10.0",
     "node-cache": "5.1.2",
-    "whatsapp-web.js": "1.18.3",
+    "whatsapp-web.js": "1.19.3",
     "yup": "0.32.11"
   },
   "devDependencies": {
     "@types/cors": "2.8.12",
     "@types/express": "4.17.14",
+    "@types/lodash": "4.14.191",
     "@types/morgan": "1.9.3",
     "nodemon": "2.0.20",
     "ts-node": "10.9.1",
